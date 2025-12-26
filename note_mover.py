@@ -281,7 +281,6 @@ topics:
 meetings:
 tasks:
 scope:
-  - personal
 tags:
   - "generated_by_script"
 aliases:
