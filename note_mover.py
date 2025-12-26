@@ -63,7 +63,7 @@ def get_files_in_specific_folders(root_dir, target_folder_name: str) -> list[str
     return matching_files
 
 def prompt_directory() -> str | None:
-    directory = filedialog.askdirectory(title="Selet the vault root path")
+    directory = filedialog.askdirectory(title="Select the vault root path")
     if directory:
         return directory
     else:
