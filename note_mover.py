@@ -161,7 +161,7 @@ if vault_structure == 'multi_vault':
         folder_prefix = ''
         if vaults_list:
             for vault in vaults_list:
-                if vault in parsed_header['tags']:
+                if vault in parsed_header['scope']:
                     folder_prefix = 'obs_' + vault
                 else:
                     folder_prefix = 'obs_0'
@@ -187,7 +187,7 @@ for file in note_list:
     parsed_header = parse_header(note_header)
 
 # Checks if note should go into gitignored folder before moving it elsewhere
-    if 'gitignored' in parsed_header['tags']:
+    if 'gitignored' in parsed_header['scope']:
         folder = "zb_gitignored"
         folder_prefix = 'obs_1_Priv'
         target_folder = os.path.join(folder_prefix, folder)
@@ -204,7 +204,7 @@ for file in note_list:
 
         if vaults_list:
             for vault in vaults_list:
-                if vault in parsed_header['tags']:
+                if vault in parsed_header['scope']:
                     folder_prefix = 'obs_' + vault
         
         note_type = parsed_header['note_type'][0]
